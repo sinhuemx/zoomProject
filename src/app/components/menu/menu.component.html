@@ -1,0 +1,9 @@
+<nav class="docs-navbar-header">
+    <button mat-button routerLink="/users">Users</button>
+    <button mat-button routerLink="/catalogs">Catalogs</button>
+    <button mat-button routerLink="/flyers" disableClose (click)="openBottomSheet(disableClose)">Flyers</button>
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button routerLink="/register" >Register</button>
+    <button mat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</button>
+</nav>
+

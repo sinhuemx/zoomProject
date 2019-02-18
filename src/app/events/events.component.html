@@ -1,0 +1,17 @@
+
+<div class="grid">
+    <div class="col inline">
+      <div class="space"></div>
+        <mat-card *ngFor="let event of events" class="inline">
+          <i class="material-icons">blur_on</i>
+          <mat-card-title>
+              <h1>{{event.id}}</h1>
+              <h3>{{event.name}}</h3>
+          </mat-card-title>
+          <mat-card-subtitle>
+              <h2>{{event.phone}}</h2>
+              <h3>{{event.website}}</h3>
+          </mat-card-subtitle>
+        </mat-card>
+    </div>
+</div>

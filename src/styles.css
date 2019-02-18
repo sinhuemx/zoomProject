@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.space{
+    margin-top: 70px;
+}
+.inline{
+    display: inline;
+}
+.pad-5{
+    padding: 5px;
+}
+.pad-10{
+    padding: 10px;
+}
+.pad-15{
+    padding: 15px;
+}
+.box {
+    background: #f8f8f8;
+  }
+  .box:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+  .navbar {
+    overflow: hidden;
+    position: fixed; 
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);  
+  }
+.data-table{
+    width: 80%;
+    margin: 20px auto;
+}
+.image-card {
+    max-width: 400px;
+  }
+  
