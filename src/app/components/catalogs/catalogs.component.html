@@ -1,13 +1,15 @@
-<div class="space"></div>
+<div class="space-xl"></div>
 <div class="grid-center">
       <div class="col-10">
           <mat-card>
-              <mat-grid-list cols="4" rowHeight="180px">
+            <div class="col pad-15">
+              <mat-grid-list cols="3" rowHeight="180px">
                   <mat-grid-tile *ngFor="let catalogs of specialEvents">
                     {{catalogs.id}}
                       <img class="image-card" mat-card-image src="https://via.placeholder.com/600/92c952">
                   </mat-grid-tile>
                 </mat-grid-list>
+              </div>
           </mat-card>
       </div>
 </div>

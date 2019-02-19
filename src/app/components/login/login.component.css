@@ -1,4 +1,7 @@
 :host mat-card {
     background-color: #99e03bf1;
     color:#000;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
