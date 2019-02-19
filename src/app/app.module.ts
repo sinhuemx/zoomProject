@@ -7,8 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { EventsComponent } from './events/events.component';
 import { SpecialEventsComponent } from './special-events/special-events.component';
 import { AuthService } from './auth.service';
@@ -23,6 +21,8 @@ import { DataTableComponent } from './components/data-table/data-table.component
 import { MatTableModule, MatPaginatorModule, MatSortModule, MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS } from '@angular/material';
 import { FlyersComponent } from './components/flyers/flyers.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({

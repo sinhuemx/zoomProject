@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; overflow-x: hidden ; background-color: #424250}
 
-
+p, a, li, div, b{
+    font-family: 'Poppins', sans-serif;
+}
+.white-text {
+    color:#fff;
+}
 .space{
     margin-top: 70px;
 }
@@ -24,7 +29,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #f8f8f8;
   }
   .box:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    box-shadow: 0 0 11px #442c2e; 
   }
   .navbar {
     overflow: hidden;
@@ -35,9 +40,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 .data-table{
     width: 80%;
-    margin: 20px auto;
 }
 .image-card {
     max-width: 400px;
   }
+.login-card{
+    width:400px;
+}
+.right{
+    float: right;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+  }
   
+  .form-container > * {
+    width: 100%;
+  }
+  .navbar-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    box-shadow: 1px 2px 5px #000;
+    z-index: 9;
+  }
+.text-color-map{
+    color:#00ffff;
+    text-align: center;
+}
+.mat-nav-list {
+    background-color: #c7e03bf1;
+    color:#000;
+}

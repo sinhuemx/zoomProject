@@ -1,3 +1,7 @@
 .full-width-table {
   width: 100%;
 }
+:host tr, th, td, mat-paginator, mat-form-field, mat-select {
+  background-color: #1e1e33;
+  color:#00ffff;
+}
