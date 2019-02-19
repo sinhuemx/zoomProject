@@ -17,8 +17,8 @@
                     <input matInput placeholder="Enter your email" [(ngModel)]="loginUserData.email" name="email" [type]="'email'" required>
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="Enter your password" [(ngModel)]="loginUserData.password" name="password" [type]="hide ? 'password' : 'text'">
-                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <input matInput placeholder="Enter your password" [(ngModel)]="loginUserData.password" [type]="hide ? 'password' : 'text'">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </mat-form-field>
                 <mat-card-subtitle class="example-button-row">
                     <div class="space"></div>
@@ -32,6 +32,11 @@
         </mat-card>
     </div>
 </div>
+
+
+
+
+
 
 <!-- <div class="py-5">
   <div class="row">
@@ -56,7 +61,7 @@
             <button type="button" (click)="loginUser()" class="btn btn-success float-right">Login</button>
           </form>
         </div>
-        
+      
       </div>
       
 

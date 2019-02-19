@@ -7,12 +7,16 @@ import { AuthGuard } from './auth.guard';
 import { UsersComponent } from './components/users/users.component';
 import { CatalogsComponent } from './components/catalogs/catalogs.component';
 import { FlyersComponent } from './components/flyers/flyers.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/',
+  { path: '',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'users',
@@ -24,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'flyers',
-    component: FlyersComponent
+    component: FlyersComponent,
   },
   {
     path: 'special',

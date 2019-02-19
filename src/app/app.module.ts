@@ -22,6 +22,7 @@ import { HeaderComponent } from './components/navigation/header/header.component
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule, MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS } from '@angular/material';
 import { FlyersComponent } from './components/flyers/flyers.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FlyersComponent } from './components/flyers/flyers.component';
     HeaderComponent,
     DataTableComponent,
     BottomSheetOverviewExampleSheet,
-    FlyersComponent
+    FlyersComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
