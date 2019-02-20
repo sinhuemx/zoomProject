@@ -7,7 +7,8 @@ import {
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSnackBarModule
 } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
@@ -38,7 +39,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
         MatDialogModule,
         MatSortModule,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatSnackBarModule
+    
     ],
     exports: [
         MatToolbarModule,
@@ -55,7 +58,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
         MatSidenavModule,
         MatSortModule,
         MatTableModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatSnackBarModule
     ]
 })
 export class MaterialModule { }

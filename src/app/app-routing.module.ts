@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SpecialEventsComponent } from './special-events/special-events.component';
 import { AuthGuard } from './auth.guard';
 import { UsersComponent } from './components/users/users.component';
 import { CatalogsComponent } from './components/catalogs/catalogs.component';
@@ -24,16 +23,12 @@ const routes: Routes = [
   },
   {
     path: 'catalogs',
+    canActivate: [AuthGuard],
     component: CatalogsComponent
   },
   {
     path: 'flyers',
     component: FlyersComponent,
-  },
-  {
-    path: 'special',
-    canActivate: [AuthGuard],
-    component: SpecialEventsComponent
   },
   {
     path: 'login',
