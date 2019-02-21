@@ -15,9 +15,9 @@
                     <input matInput placeholder="Enter your email" [(ngModel)]="loginUserData.email" name="email" [type]="'email'" required>
                 </mat-form-field>
                 <mat-form-field>
-                  <input matInput placeholder="Enter your password" [(ngModel)]="loginUserData.password" [type]="hide ? 'password' : 'text'" required>
-                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </mat-form-field>
+                    <input matInput [(ngModel)]="loginUserData.password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </mat-form-field>
                 <mat-card-subtitle class="example-button-row">
                 <div class="space"></div>
                 <div class="grid-3">

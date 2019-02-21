@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CatalogsComponent implements OnInit {
   
-  specialEvents = []
+  public specialEvents = []
 
   constructor(private _eventService: EventService,
     private _router: Router) { }

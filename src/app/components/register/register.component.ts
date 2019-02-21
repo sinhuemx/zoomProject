@@ -3,8 +3,15 @@ import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router'
 import { HttpErrorResponse } from '@angular/common/http';
 import { AlertSuccessComponent } from '../alerts/alert-success/alert-success.component';
-import { MatDialog, MatSnackBar } from '@angular/material';
+import { MatDialog, MatSnackBar, ErrorStateMatcher } from '@angular/material';
+import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,7 +20,11 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 
 export class RegisterComponent implements OnInit {
 
+  
+  public hide = true;
+  public matcher = new MyErrorStateMatcher();
   public registerUserData = {}
+
   constructor(private _auth: AuthService,
               private _router: Router,
               public dialog: MatDialog,
@@ -29,12 +40,11 @@ export class RegisterComponent implements OnInit {
       res => {
         localStorage.setItem('token', res.token)
         this.registerUserData = res
-        this._router.navigate(['/login'])
         if( res instanceof HttpErrorResponse ) {
           if (res.status === 200) {
             this.snackBar.openFromComponent(AlertSuccessComponent, {
             });
-          } 
+          }
         }
       },
       err => {
@@ -42,7 +52,7 @@ export class RegisterComponent implements OnInit {
           if (err.status === 304) {
             this.snackBar.openFromComponent(AlertSuccessComponent, {
             });
-          } 
+          }
         }
       }
     )

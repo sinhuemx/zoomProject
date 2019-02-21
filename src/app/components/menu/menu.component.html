@@ -2,8 +2,8 @@
     <button mat-button routerLink="/home"><p>Home</p></button>
     <button mat-button routerLink="/users"><p>Users</p></button>
     <button mat-button routerLink="/catalogs"><p>Catalogs</p></button>
-    <button mat-button routerLink="/flyers" (click)="openBottomSheet(disableClose)"><p>Flyers</p></button>
-    <button mat-button routerLink="/login"><p>Login</p></button>
-    <button mat-button routerLink="/register"><p>Register</p></button>
-    <button mat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()"><p>Logout</p></button>
+    <button mat-button routerLink="/flyers" (click)="openBottomSheet()"><p>Flyers</p></button>
+    <button mat-button  routerLink="/login"><p>Login</p></button>
+    <button mat-button  routerLink="/register"><p>Register</p></button>
+    <button mat-button  (click)="_authService.logoutUser()"><p>Logout</p></button>
 </nav>

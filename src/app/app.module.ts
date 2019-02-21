@@ -17,7 +17,7 @@ import { UsersComponent } from './components/users/users.component';
 import { CatalogsComponent } from './components/catalogs/catalogs.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule, MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatBottomSheetModule, MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material';
 import { FlyersComponent } from './components/flyers/flyers.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -61,7 +61,8 @@ import { AlertSuccessComponent } from './components/alerts/alert-success/alert-s
     multi: true
   },
   {provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}},
-  {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
+  {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}},
+  {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
 ],
   entryComponents: [BottomSheetOverviewExampleSheet, AlertSuccessComponent],
   bootstrap: [AppComponent]
