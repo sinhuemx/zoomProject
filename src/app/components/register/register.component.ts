@@ -3,7 +3,9 @@ import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router'
 import { HttpErrorResponse } from '@angular/common/http';
 import { AlertSuccessComponent } from '../alerts/alert-success/alert-success.component';
-import { MatDialog, MatSnackBar, ErrorStateMatcher } from '@angular/material';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
